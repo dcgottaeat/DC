@@ -1,0 +1,23 @@
+href="([^"]*)
+
+
+Click anywhere on the page and apply the below JS Code as the first step to capture the Images :
+
+
+var thumbs = document.getElementsByClassName('tdThumb');
+for(var i=0; i<thumbs.length; i++) {
+    var thumb = thumbs[i];
+    var img = thumb.children[0].children[0];
+    var imgURL = img.getAttribute('src');
+    imgURL = imgURL.replace('64', '1600');
+    img.setAttribute('src', imgURL);
+}
+
+
+src="([^"]*)
+
+
+After capturing ALL other required details from the Details page, click anywhere on the page and apply the below JS Code as the first step to capture the product Description details
+
+var frame = document.getElementById('desc_ifr');
+window.location = frame.getAttribute("src");
